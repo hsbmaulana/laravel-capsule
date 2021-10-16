@@ -1,0 +1,8 @@
+Sitemap:
+
+User-agent: *
+
+Allow:
+
+Disallow: /vendor/
+Disallow: /node_modules/

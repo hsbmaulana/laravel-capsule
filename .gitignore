@@ -1,0 +1,12 @@
+/vendor/
+/node_modules/
+/.idea/
+/docker/
+/.vagrant/
+
+/public/hot/
+/public/storage/
+.*.swp
+.env
+.phpunit.result.cache
+/storage/*.key

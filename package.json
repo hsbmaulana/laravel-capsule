@@ -1,0 +1,14 @@
+{
+    "private": true,
+
+    "scripts": {
+
+        "watch": "mix watch --hot",
+
+        "development": "mix",
+        "production": "mix --production"
+    },
+
+    "dependencies": { "laravel-echo-server": "^1.6" },
+    "devDependencies": { "laravel-mix": "^6.0" }
+}
