@@ -38,5 +38,8 @@ class AuthServiceProvider extends ServiceProvider
      * @return void
      */
     protected function authorize()
-    {}
+    {
+        Gate::define('activateable', [ \App\Policies\Auth\Setting::class, 'activate', ]);
+        Gate::define('deactivateable', [ \App\Policies\Auth\Setting::class, 'deactivate', ]);
+    }
 }
