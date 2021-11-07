@@ -19,8 +19,8 @@ class UserFactory extends Factory
     {
         return [
 
-            'name' => $this->faker->valid(function ($string) { return \Illuminate\Support\Str::length($string) <= 15; })->userName,
-            'email' => $this->faker->unique()->email,
+            config('fortify.username') => $this->faker->valid(function ($string) { return \Illuminate\Support\Str::length($string) <= 15; })->userName,
+            config('fortify.email') => $this->faker->unique()->email,
             'password' => \Illuminate\Support\Facades\Hash::make("tryhitme"),
             'email_verified_at' => null,
         ];

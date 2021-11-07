@@ -4,6 +4,7 @@
         "php": "^7.3|^8.0",
         "predis/predis": "^1.0",
         "laravel/framework": "^8.0", "laravel/tinker": "^2.0", "laravel/legacy-factories": "^1.0",
+        "laravel/fortify": "^1.0",
 
         "guzzlehttp/guzzle": "^7.0"
     },

@@ -51,27 +51,10 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     /**
      * @var array
      */
-    protected $fillable = [ 'name', 'email', 'password', ];
+    protected $guarded = [];
 
     /**
      * @var array
      */
-    protected $hidden = [ 'password', 'email_verified_at', ];
-
-    /**
-     * @return string
-     */
-    public function getNameAttribute()
-    {
-        return '@' . $this->attributes['name'];
-    }
-
-    /**
-     * @param string $value
-     * @return void
-     */
-    public function setNameAttribute($value)
-    {
-        $this->attributes['name'] = $value;
-    }
+    protected $hidden = [ 'password', 'email_verified_at', 'remember_token', ];
 }

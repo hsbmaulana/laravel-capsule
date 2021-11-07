@@ -15,10 +15,11 @@ class Users extends Migration
 
             $table->bigIncrements('id');
 
-            $table->string('name', 15)->unique();
-            $table->string('email', 64)->unique();
+            $table->string(config('fortify.username'), 15)->unique();
+            $table->string(config('fortify.email'), 64)->unique();
             $table->text('password');
 
+            $table->string('remember_token', 100)->nullable(true);
             $table->timestamp('email_verified_at', 0)->nullable(true);
             $table->timestamp('created_at', 0)->nullable(true);
             $table->timestamp('deleted_at', 0)->nullable(true);

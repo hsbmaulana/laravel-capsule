@@ -13,12 +13,12 @@ class Resetters extends Migration
     {
         Schema::create('resetters', function (Blueprint $table) {
 
-            $table->string('email', 64);
+            $table->string(config('fortify.email'), 64);
             $table->text('token');
 
             $table->timestamp('created_at', 0)->nullable(true);
 
-            $table->index('email');
+            $table->index(config('fortify.email'));
         });
     }
 
